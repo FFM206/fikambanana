@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <title>FFM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #login {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔒 Entrer votre mot de passe</h2>
+  <div id="login">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button onclick="checkPassword()">Ok➡️</button>
+    <p id="message" style="color:red;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      let pass = document.getElementById("password").value;
+      let correct = "@FFM206"; // eto no ametrahana mot de passe marina
+
+      if (pass === correct) {
+        // raha marina dia alefa any amin’ny pejy hafa
+        window.location.href = "home.html"; 
+      } else {
+        document.getElementById("message").innerText = "❌ Mot de passe incorrect!❌";
+      }
+    }
+  </script>
+</body>
+</html>
